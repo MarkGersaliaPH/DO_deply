@@ -79,6 +79,9 @@ Route::get('/crud/complete/{id}/','CrudController@complete');
 Route::get('/crud/testing/{task}/','CrudController@for_testing');
 Route::get('/crud/update/status/{task}/','CrudController@update_status');
 Route::get('/crud/update/progress/{id}/{progress}','CrudController@updateProgress');
+Route::get ( '/callback/{service}', 'SocialAuthController@callback' );
+Route::get ( '/redirect/{service}', 'SocialAuthController@redirect' );
+
 
 // B3nt4h4n
 // mysql username: admindb@bentahan/bentahan
