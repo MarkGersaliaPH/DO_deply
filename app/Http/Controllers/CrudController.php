@@ -11,21 +11,22 @@ class CrudController extends Controller
     //
     public function index(){
  
-    	$today = \Carbon\Carbon::now()->addSeconds(28800)->format('Y-m-d');    
-    	// $tasks = Task::whereDate('created_at',$today)->get();   
-    	$tasks = Task::latest()->get();   
+    	$today = \Carbon\Carbon::now()->format('Y-m-d');   
+    	$tasks = Task::whereDate('created_at',$today)->get();  
+    	// $tasks = Task::latest()->get();   
     	return view('task.table',['tasks'=>$tasks]);
     }
 
         //
-    public function sorted(Request $request){
-   //  	$year = '2019';
- 		// // $date = \Carbon\Carbon::create(); 
-   //  	$today = \Carbon\Carbon::createFromDate($year, $request->month, $request->days)->format('Y-m-d'); 
-   //  	$tasks = Task::whereDate('created_at',$today)->get(); 
-   //  	// echo $today;
-   //  	dd($tasks);
-   //  	return view('task.table',['tasks'=>$tasks]);
+    public function sorted(Request $request){  
+    	$year = 2019; $month = $request->month; $day = $request->days;
+		$hour = 20; $minute = 30; $second = 15; $tz = 'Asia/Manila'; 
+		// echo $month;
+		$today = \Carbon\Carbon::createFromDate(null, $month, $day, $tz)->format('Y-m-d');
+		// echo \Carbon\Carbon::createFromFormat('Y-m-d H', '2019-'.$month.'-'.$day.' 22')->toDateTimeString(); // 1975-05-21 22:00:00 
+    	$tasks = Task::whereDate('created_at',$today)->get(); 
+    	// echo $today; 
+    	return view('task.table',['tasks'=>$tasks]);
     }
 
     public function create(CrudFormRequest $request){ 

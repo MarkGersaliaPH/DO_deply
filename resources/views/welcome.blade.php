@@ -46,10 +46,11 @@
             <div class="panel-heading">Tasks</div>
             <div class="panel-body">
                --}}
+               <div id="test"></div>
           <div class="row">
             <div class="col-sm-6">
             <div class="form-inline">
-            <label>Display Task for: {{date('Y-m-d')}}</label>
+            <label>Display Task for:</label>
             <select   id="days" class="form-control">
             @foreach($days as $day)
               <option  {{$now->day == $day ? 'selected default ' : '' }} >{{$day}}</option>
@@ -207,11 +208,20 @@
   function sortTask(){
     var days = $('#days').val();
     var month = $('#month').val();
-    $.get('crud/sort/'+days+"/"+month,function(response){
-      console.log(response);
+    $.get('crud/sort/'+days+"/"+month,function(response){ 
+
+            var table = $('#tasks').find('tbody');
+            table.html(response);
     });
   }
+
+$(document).ready(function(){
+      showDataSet()
+
+})
+
 </script>
+
 
     <script type="text/javascript">
       var saveButton = $('#save'),
@@ -234,11 +244,6 @@
           saveButton.hide();  
           loading.hide();
           idGroup.hide();
-
-$(document).ready(function(){
-      showDataSet()
-
-})
 
       function showDataSet(){
         $.ajax({
@@ -460,6 +465,9 @@ $(document).ready(function(){
       }
 
     </script>
+
+
+</script>
 
 <script type="text/javascript"> 
   

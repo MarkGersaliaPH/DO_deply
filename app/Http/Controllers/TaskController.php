@@ -8,8 +8,8 @@ class TaskController extends Controller
 {
     //
     public function index(){ 
-  
-    	$today = \Carbon\Carbon::now()->addSeconds(28800);  
+  date_default_timezone_set("Asia/Manila");
+    	$today = \Carbon\Carbon::now();   
     	$dates = [];
     	$days = []; 
         for($i=1; $i < $today->daysInMonth + 1; ++$i) {
