@@ -68,7 +68,11 @@ Route::get('test', function () {
 
 
 Route::get('/crud','CrudController@index');
+<<<<<<< HEAD
 Route::get('/crud/sort/{days}/{month}','CrudController@sorted');
+=======
+Route::get('/crud/sort/{month}/{days}','CrudController@sorted');
+>>>>>>> b78006be52c44c0f921c5ee9f514c1ec87090fed
 Route::get('/crud/edit/{id}','CrudController@edit');
 Route::match(['put', 'patch'], '/crud/update/{id}','CrudController@update');
 Route::get('/crud/delete/{id}','CrudController@destroy');

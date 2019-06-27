@@ -131,7 +131,6 @@ function updateStatusForTesting(id){
 		}
 	})
 }
-d5751c3ea4a52b35eefbd4082a4559a60a9f072592bd1ae1
   	function startTimer(id){
   		  timer.timer({ 
 		  	seconds: convertSavedTimeToSeconds(savedTime.val()), 

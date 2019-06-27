@@ -27,4 +27,4 @@
 
 <style type="text/css">
 	.bg-white{background-color: #fff;}
-</style>
+</style> 
