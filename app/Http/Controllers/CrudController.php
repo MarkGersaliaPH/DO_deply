@@ -11,20 +11,13 @@ class CrudController extends Controller
     //
     public function index(){
  
-<<<<<<< HEAD
     	$today = \Carbon\Carbon::now()->format('Y-m-d');   
     	$tasks = Task::whereDate('created_at',$today)->get();  
     	// $tasks = Task::latest()->get();   
-=======
-    	$today = \Carbon\Carbon::now()->addSeconds(28800)->format('Y-m-d');    
-    	// $tasks = Task::whereDate('created_at',$today)->get();   
-    	$tasks = Task::latest()->get();   
->>>>>>> b78006be52c44c0f921c5ee9f514c1ec87090fed
     	return view('task.table',['tasks'=>$tasks]);
     }
 
         //
-<<<<<<< HEAD
     public function sorted(Request $request){  
     	$year = 2019; $month = $request->month; $day = $request->days;
 		$hour = 20; $minute = 30; $second = 15; $tz = 'Asia/Manila'; 
@@ -34,16 +27,6 @@ class CrudController extends Controller
     	$tasks = Task::whereDate('created_at',$today)->get(); 
     	// echo $today; 
     	return view('task.table',['tasks'=>$tasks]);
-=======
-    public function sorted(Request $request){
-   //  	$year = '2019';
- 		// // $date = \Carbon\Carbon::create(); 
-   //  	$today = \Carbon\Carbon::createFromDate($year, $request->month, $request->days)->format('Y-m-d'); 
-   //  	$tasks = Task::whereDate('created_at',$today)->get(); 
-   //  	// echo $today;
-   //  	dd($tasks);
-   //  	return view('task.table',['tasks'=>$tasks]);
->>>>>>> b78006be52c44c0f921c5ee9f514c1ec87090fed
     }
 
     public function create(CrudFormRequest $request){ 

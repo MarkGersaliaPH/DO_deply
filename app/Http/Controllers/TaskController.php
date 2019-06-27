@@ -7,14 +7,8 @@ use Illuminate\Http\Request;
 class TaskController extends Controller
 {
     //
-    public function index(){ 
-<<<<<<< HEAD
-  date_default_timezone_set("Asia/Manila");
+    public function index(){  
     	$today = \Carbon\Carbon::now();   
-=======
-  
-    	$today = \Carbon\Carbon::now()->addSeconds(28800);  
->>>>>>> b78006be52c44c0f921c5ee9f514c1ec87090fed
     	$dates = [];
     	$days = []; 
         for($i=1; $i < $today->daysInMonth + 1; ++$i) {
