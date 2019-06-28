@@ -33,7 +33,7 @@
 
 						<select id="month">
 							@php
-								$month = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+								$month = ['January','February','March','April','May','June','July','August','September','October','November','December'];  
 							@endphp
 							@foreach($month as $key => $month)
 

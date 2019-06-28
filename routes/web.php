@@ -83,5 +83,7 @@ Route::get ( '/callback/{service}', 'SocialAuthController@callback' );
 Route::get ( '/redirect/{service}', 'SocialAuthController@redirect' );
 
 
+
+
 // B3nt4h4n
 // mysql username: admindb@bentahan/bentahan

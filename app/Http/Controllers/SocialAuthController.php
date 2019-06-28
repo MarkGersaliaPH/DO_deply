@@ -15,4 +15,4 @@ class SocialAuthController extends Controller
         $user = Socialite::with ( $service )->user ();
         return view ( 'home' )->withDetails ( $user )->withService ( $service );
     }
-}
+}  
