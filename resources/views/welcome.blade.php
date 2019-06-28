@@ -41,9 +41,9 @@
       <div class="row">
         <div class="col-sm-4">  
           <h1>Task management</h1>     
- {{--          <a href="login/facebook">Login in with Facebook</a>
-          <a href="login/google">Login in with Google</a>
-  --}}
+          <a class="btn btn-primary" href="login/facebook">Login in with Facebook</a>
+          <a class="btn btn-default" href="login/google">Login in with Google</a>
+ 
         </div>
 
         <div class="col-sm-4">
