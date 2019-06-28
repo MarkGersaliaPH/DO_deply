@@ -30,19 +30,20 @@
  
     <div class="container"> 
       
-      @auth
+    {{--   @auth
       <div class="well">
         <img src="{{Auth::user()->image}}">
         <h3>Welcome,{{Auth::user()->name}}</h3>
         <small>{{Auth::user()->email}}</small>
       </div>
-      @endauth
+      @endauth --}}
       <div id="alerts"></div>
       <div class="row">
         <div class="col-sm-4">  
           <h1>Task management</h1>     
-          <a href="login/facebook">Login in with Facebook</a>
- 
+ {{--          <a href="login/facebook">Login in with Facebook</a>
+          <a href="login/google">Login in with Google</a>
+  --}}
         </div>
 
         <div class="col-sm-4">
