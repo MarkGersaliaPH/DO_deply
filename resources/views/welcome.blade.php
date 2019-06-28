@@ -30,13 +30,13 @@
  
     <div class="container"> 
       
-    {{--   @auth
+      @auth
       <div class="well">
         <img src="{{Auth::user()->image}}">
         <h3>Welcome,{{Auth::user()->name}}</h3>
         <small>{{Auth::user()->email}}</small>
       </div>
-      @endauth --}}
+      @endauth
       <div id="alerts"></div>
       <div class="row">
         <div class="col-sm-4">  
