@@ -31,7 +31,7 @@
     <div class="container"> 
       <div id="alerts"></div>
       <div class="row">
-        <div class="col-sm-4">
+        <div class="col-sm-4">  
           <h1>Task management</h1>     
           <a href="redirect/facebook">Login in with Facebook</a>
  
