@@ -29,7 +29,7 @@ $user = User::create([
                 'provider_id'   => $userSocial->getId(),
                 'provider'      => $provider,
             ]);
-         return redirect()->route('home');
+         return redirect()->route('/');
         }
 }
 }
